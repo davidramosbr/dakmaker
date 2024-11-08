@@ -1,0 +1,64 @@
+.news-container .heading {
+    background: url(../images/general/topbar-background-red.gif);
+    height: 26px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.news-container .heading div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.news-container .heading div .title {
+    font-weight: bolder;
+}
+
+.news-container .heading .date {
+    font-size: 8pt;
+}
+
+.news-container .content {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.news-container .content p:first-of-type::first-letter {
+    font-family: 'RealTibiaFont', serif;
+    text-transform: capitalize;
+    color: darkred;
+    font-size: 32pt;
+    line-height: 20pt;
+}
+
+.news-container .content a {
+    font-weight: bolder;
+    color: darkred;
+}
+
+.news-container .content .image-text {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+}
+
+.news-container .content .image-text .text {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.news-container .content .image-text img {
+    grid-column: 2;
+    width: 100%;
+}

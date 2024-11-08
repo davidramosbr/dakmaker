@@ -1,0 +1,181 @@
+.content-box .heading {
+    width: calc(100% + 2px);
+    position: relative;
+    left: -1px;
+    box-sizing: border-box;
+    border: 5px solid transparent;
+    border-image: url(../images/general/box-frame.gif) 5 round;
+}
+
+.content-box .heading .inner-heading {
+    box-sizing: border-box;
+    width: calc(100% + 2px);
+    position: relative;
+    left: -1px;
+    background: #5f4d41;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: white;
+    font-weight: bolder;
+    line-height: 21px;
+    font-family: Verdana,Arial,Times New Roman,sans-serif;
+}
+
+.content-box .content {
+    border-right: 2px solid #55636c;
+    border-left: 2px solid #55636c;
+    border-bottom: 2px solid #55636c;
+}
+
+.content-box .content .inner-content {
+    background: #f1dfc4;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.content-box .content .inner-content .shadow-box {
+    border: 1px solid #5f4d41;
+    box-shadow: 2px 2px 3px #776050;
+}
+
+.content-box .content .inner-content .shadow-box .inner-shadow-box{
+    background: #d4c0a1;
+    border: 1px solid #faf0d7;
+    padding: 5px;
+}
+
+.content-box .content .inner-content .shadow-box .inner-shadow-box.unbordered {
+    padding: 0px;
+    border: 0;
+}
+
+.info-box {
+    border: 1px solid #5f4d41;
+    box-shadow: 2px 2px 3px #776050;
+}
+
+.info-box .inner-info-box{
+    background: #d4c0a1;
+    border: 1px solid #faf0d7;
+    padding: 5px;
+}
+
+.info-box .inner-info-box.failure {
+    background: #d4c0a1;
+    color: red;
+    border: 1px solid #faf0d7;
+    padding: 5px;
+}
+
+.info-box .inner-info-box.success {
+    background: #d4c0a1;
+    color: green;
+    border: 1px solid #faf0d7;
+    padding: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.button-spaced {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 3px;
+}
+
+.button-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 3px;
+}
+
+form .inline-radio {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 3px;
+}
+
+form .inline-radio label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-spacing: 1px;
+    background-color: #faf0d7;
+}
+
+table tr:nth-child(odd) {
+    background-color: #d5c0a1;
+}
+
+table tr:nth-child(even) {
+    background-color: #f1e0c6;
+}
+
+table th {
+    background: #505050;
+    color: white;
+}
+
+table td {
+    white-space: nowrap;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+table td.pnameLevel {
+    padding-top: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+table td.pnameLevel span {
+    font-size: 8pt;
+}
+
+table td.outfit {
+    width: 32px; height: 32px;
+    position: relative;
+}
+
+table td.outfit img {
+    position: absolute;
+    left: -36px;
+    top: -36px;
+}
+
+table.spaced td {
+    padding: 5px 10px;
+}
