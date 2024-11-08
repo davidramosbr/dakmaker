@@ -1,6 +1,13 @@
 <?php
     if(!defined('PAGELOAD')) { http_response_code(404); echo 'Failed to locate resource...'; exit(); }
 
+    $cache_serverdata = json_decode(Functions::getCacheData(), true);
+    if (!$cache_serverdata && Player::countOnlinePlayers() == 0) {
+        $players_online = "Offline Server";
+    } else {
+        $players_online = $cache_serverdata['players']['@attributes']['online'].' Players Online';
+    }
+
     $wPageManager = [];
     $wPageManager['topic'] = str_replace('-', ' ', $topic);
     $wPageManager['menu'] = Menu::findMenuParent($wPageManager['topic']);

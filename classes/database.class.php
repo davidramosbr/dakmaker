@@ -23,6 +23,7 @@
                 self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch (PDOException $e) {
                 $this->isConnected = false;
+                $this->unsetInstalled();
             }
         }
 

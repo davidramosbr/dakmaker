@@ -16,13 +16,5 @@
     $site_name = $config->getConfigValue('general.servername');
     $site_title = $site_name.' | '.ucwords(str_replace('-', ' ', $topic));
 
-    $cache_serverdata = json_decode(Functions::getCacheData(), true);
-
-    if (!$cache_serverdata && Player::countOnlinePlayers() == 0) {
-        $players_online = "Offline Server";
-    } else {
-        $players_online = $cache_serverdata['players']['@attributes']['online'].' Players Online';
-    }
-
     $main_content = '';
 
