@@ -157,7 +157,6 @@
 
                     $tbData = [];
                     $tbData['level_rank'] = Player::getPlayersOrderedBy('level', 0, 5);
-                    $tbData['arena_rank'] = Player::getPlayersOrderedBy('arena_points', 0, 5);
 
 
                     // level rank display
@@ -186,46 +185,6 @@
                         ';
                     }
                     unset($i);
-
-                    echo '
-                            </div>
-                        </div>
-                    </div>
-                    ';
-
-
-                    // arena rank display
-                    echo '
-                    <div class="themebox-container">
-                        <div class="title">
-                            <img src="https://tibiawiki.com.br/images/3/3a/Armageddon_Plans.gif"/>
-                            <span>Rank Arena</span>
-                        </div>
-                        <div class="content">
-                            <div class="list">
-                    ';
-
-                    $i = 0;
-                    foreach ($tbData['arena_rank'] as $player) {
-                        $i++;
-                        echo '
-                                <div class="list-item">
-                                    <img class="outfit" src="https://outfit-images.ots.me/1285_walk_animation/animoutfit.php?id='.$player['looktype'].'&addons='.$player['lookaddons'].'&head='.$player['lookhead'].'&body='.$player['lookbody'].'&legs='.$player['looklegs'].'&feet='.$player['lookfeet'].'&mount=0&direction=3"/>
-                                    <img class="medal" src="/themes/default/images/content/medal-'.($i < 4 ? $i : 0).'.gif"/>
-                                    <div class="data">
-                                        <span class="name">'.$player['name'].'</span>
-                                        <span class="info">AP: '.$player['arena_points'].'</span>
-                                    </div>
-                                </div>
-                        ';
-                    }
-                    unset($i);
-
-                    echo '
-                        <div class="list-button">
-                            <a href="/arena-system" class="sbutton">How arena works?</a>
-                        </div>
-                    ';
 
                     echo '
                             </div>

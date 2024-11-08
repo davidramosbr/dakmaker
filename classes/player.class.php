@@ -35,7 +35,7 @@
                 throw new Exception('Not connected to the database.');
             }
         
-            $valid_columns = ['name', 'level', 'arena_points'];
+            $valid_columns = ['name', 'level'];
             if (!in_array($column, $valid_columns)) {
                 throw new InvalidArgumentException('Invalid column name.');
             }
